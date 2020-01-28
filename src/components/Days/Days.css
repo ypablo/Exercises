@@ -1,0 +1,23 @@
+.range {
+    background-color: darkgrey;
+    width: 75px;
+    margin-top: 5px;
+    height: auto;
+}
+
+.numbers {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    height: 50px;
+    width: 100%;
+}
+
+.numbers:hover {
+    background-color: cornflowerblue;
+    
+}

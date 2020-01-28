@@ -1,8 +1,5 @@
 import React from 'react'
-
-
-
-
+import "./Days.css"
 
 export default function Days() {
     
@@ -16,14 +13,16 @@ export default function Days() {
             foo.push(i)
         }
 
-       let rangeOfDaysInMonth = foo.map(elem => elem)
+       let rangeOfDaysInMonth = foo.map(elem => {
+           return <div className="numbers" key={elem}>
+               {elem}</div> 
+       })
    
     return (
         <div>
-            {numberDaysOfMonth}
-        <br/>
-            {rangeOfDaysInMonth}
-        
+            <div className="range">
+                {rangeOfDaysInMonth}
+            </div>
         </div>
     )
 }
