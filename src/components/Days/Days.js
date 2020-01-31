@@ -18,19 +18,21 @@ export default function Days() {
     })
 
 
-    let x = new Date()
+
+
+    let x = new Date(year, month, (0 - numberDaysOfMonth) + 1)
     const option = { weekday: "long" }
     let nameDay = x.toLocaleDateString('en-GB', option)
-    console.log(nameDay)
+    console.log(nameDay, x)
 
     let foo2 = []
 
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < numberDaysOfMonth; i++) {
         foo2.push(x.toLocaleDateString('en-GB', { weekday: 'long' }));
         x.setDate(x.getDate() + 1);
     }
-    let namesOfDaysInMonth = foo2.map(elem => {
-        return <div className="numbers" key={elem}>
+    let namesOfDaysInMonth = foo2.map((elem, index) => {
+        return <div className="numbers" key={index}>
             {elem}</div>
     })
 
