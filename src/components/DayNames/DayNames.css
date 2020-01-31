@@ -1,11 +1,14 @@
-.structure {
-    
-    padding: 5px;
-    background-color: darkgreen;
+.structure {  
+    display: flex;
+    background-color: lightslategrey;
     color: white;
     font-weight: 600;
     font-size: large;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+    height: 99vh;
+}
+
+.operator {
+    width: 85px;
+    border: 1px solid white;
+    color: #fff;
 }
