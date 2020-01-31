@@ -18,13 +18,7 @@ export default function Days() {
     })
 
 
-
-
     let x = new Date(year, month, (0 - numberDaysOfMonth) + 1)
-    const option = { weekday: "long" }
-    let nameDay = x.toLocaleDateString('en-GB', option)
-    console.log(nameDay, x)
-
     let foo2 = []
 
     for (let i = 0; i < numberDaysOfMonth; i++) {
