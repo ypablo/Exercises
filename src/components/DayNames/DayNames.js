@@ -16,24 +16,20 @@ export default function Cells() {
     let weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date().getDay()]
 
 
-    const month = new Date().getMonth() + 1
-    const year = new Date().getFullYear()
-    const numberDaysOfMonth  = new Date(year, month, 0).getDate();
-        
-       
-    let foo = []
-    for (let i=1; i <= numberDaysOfMonth; i++){
-        foo.push(i)
-    }
 
-    let nameOfTheDay = weekday.map(elem => {
-        return <div className="structure" key={elem}>
-            {elem}</div> 
-    })
+    // let foo = []
+    // for (let i = 1; i <= numberDaysOfMonth; i++) {
+    //     foo.push(i)
+    // }
+
+    // let nameOfTheDay = weekday.map(elem => {
+    //     return <div className="structure" key={elem}>
+    //         {elem}</div> 
+    // })
 
     return (
         <div className="structure">
-            {nameOfTheDay}
+            {weekday}
         </div>
     )
 }

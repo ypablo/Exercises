@@ -2,26 +2,45 @@ import React from 'react'
 import "./Days.css"
 
 export default function Days() {
-    
-        const month = new Date().getMonth() + 1
-        const year = new Date().getFullYear()
-        const numberDaysOfMonth  = new Date(year, month, 0).getDate();
-        
-       
-       let foo = []
-        for (let i=1; i <= numberDaysOfMonth; i++){
-            foo.push(i)
-        }
 
-       let rangeOfDaysInMonth = foo.map(elem => {
-           return <div className="numbers" key={elem}>
-               {elem}</div> 
-       })
-   
+    const month = new Date().getMonth() + 1
+    const year = new Date().getFullYear()
+    const numberDaysOfMonth = new Date(year, month, 0).getDate();
+
+
+    let foo1 = []
+    for (let i = 1; i <= numberDaysOfMonth; i++) {
+        foo1.push(i)
+    }
+    let rangeOfDaysInMonth = foo1.map(elem => {
+        return <div className="numbers" key={elem}>
+            {elem}</div>
+    })
+
+
+    let x = new Date()
+    const option = { weekday: "long" }
+    let nameDay = x.toLocaleDateString('en-GB', option)
+    console.log(nameDay)
+
+    let foo2 = []
+
+    for (let i = 0; i < 7; i++) {
+        foo2.push(x.toLocaleDateString('en-GB', { weekday: 'long' }));
+        x.setDate(x.getDate() + 1);
+    }
+    let namesOfDaysInMonth = foo2.map(elem => {
+        return <div className="numbers" key={elem}>
+            {elem}</div>
+    })
+
     return (
-        <div>
-            <div className="range">
+        <div className="month">
+            <div className="day-range">
                 {rangeOfDaysInMonth}
+            </div>
+            <div className="day-names">
+                {namesOfDaysInMonth}
             </div>
         </div>
     )

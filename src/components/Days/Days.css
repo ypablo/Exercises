@@ -1,8 +1,22 @@
-.range {
+.month{
+    display:flex;
+    height: 99vh;
+}
+.day-range {
     background-color: darkgrey;
-    width: 75px;
-    margin-top: 5px;
-    height: auto;
+    width: 50px;
+    display:flex;
+    flex-direction:column;
+    flex: 50%;
+}
+
+.day-names {
+    display:flex;
+    flex-direction:column;
+    background-color: lightgrey;
+    height: 100%;
+    width: 100%;
+    flex: 50%;
 }
 
 .numbers {
@@ -13,7 +27,7 @@
     color: white;
     font-weight: 600;
     font-size: large;
-    height: 50px;
+    height: 100%;
     width: 100%;
 }
 
@@ -21,3 +35,5 @@
     background-color: cornflowerblue;
     
 }
+
+

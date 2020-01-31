@@ -6,8 +6,8 @@ import DayNames from "./components/DayNames/DayNames"
 function App() {
   return (
     <div className="App">
-      <Days/>
-      <DayNames/>
+      <Days />
+      <DayNames />
     </div>
   );
 }
