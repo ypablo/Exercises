@@ -19,13 +19,16 @@ export default function Cells(props) {
 
 
     return (
-        <div className="table">
-            <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-            <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-            <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-            <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-            <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-            <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-        </div >
+        <div>
+            <div>TOP OPS</div>
+            <div className="table">
+                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
+                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
+                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
+                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
+                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
+                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
+            </div >
+        </div>
     )
 }
