@@ -1,14 +1,43 @@
-.structure {  
+.table {  
     display: flex;
-    background-color: lightslategrey;
-    color: white;
-    font-weight: 600;
-    font-size: large;
     height: 99vh;
 }
 
-.operator {
-    width: 85px;
-    border: 1px solid white;
-    color: #fff;
+.cells {
+    display:flex;
+    flex-direction:column;
+    height: 100%;
+    width: 100%;
 }
+
+
+.operator {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border: 1px solid black;
+    border-bottom: 0;
+    border-left:0;
+    background-color: lightslategrey;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: large;
+    height: 100%;
+    width: 85px;
+}
+
+.operator:hover {
+    background-color: darkslategray;
+}
+
+.operator:last-child{
+    border-bottom: 1px solid black;
+}
+.cells:first-child {
+    border-left: 1px solid black;
+}
+
+.operator:nth-of-type(7n+3) {
+    border-top: 2px solid black;
+  }

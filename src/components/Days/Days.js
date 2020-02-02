@@ -3,10 +3,10 @@ import "./Days.css"
 
 export default function Days() {
 
+    //Getting number of days of month
     const month = new Date().getMonth() + 1
     const year = new Date().getFullYear()
     const numberDaysOfMonth = new Date(year, month, 0).getDate();
-
 
     let foo1 = []
     for (let i = 1; i <= numberDaysOfMonth; i++) {
@@ -17,7 +17,7 @@ export default function Days() {
             {elem}</div>
     })
 
-
+    //Adding day names
     let x = new Date(year, month, (0 - numberDaysOfMonth) + 1)
     let foo2 = []
 
@@ -29,6 +29,11 @@ export default function Days() {
         return <div className="numbers" key={index}>
             {elem}</div>
     })
+
+
+
+
+
 
     return (
         <div className="month">
