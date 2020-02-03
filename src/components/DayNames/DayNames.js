@@ -12,22 +12,41 @@ export default function Cells(props) {
     for (let i = 1; i <= numberDaysOfMonth; i++) {
         foo1.push(i)
     }
-    let rangeOfDaysInMonth = foo1.map((elem, index) => {
-        return <div className="operator" key={index} type={elem}>
-            {elem}</div>
-    })
+
+    //let rangeOfDaysInMonth = foo1.map((elem, index) => {
+    //    return <div className="operator" key={index} type={elem}>
+    //        {elem}</div>
+    //})
+
+    let foo2 =["Charlotte", "Clint", "Michael", "Pawel", "Phil", "Simon"]
+    const ops = foo2.map((elem, index) =>{
+        return (
+            <div className="ops_header" key={index}>
+                {elem}{foo1.map((cell, index) =>{
+                        return (<div className="operator" key={index} onClick={() => alert("wow")}>{cell}</div>)
+                })} 
+            </div> )})
+
+    
+
+    //var myObject = { 'a': 1, 'b': 2, 'c': 3 };
+    //Object.keys(myObject).map(key => {
+    //myObject[key] *= 2;
+    //});
+
+
 
 
     return (
         <div>
-            <div>TOP OPS</div>
-            <div className="table">
+            <div className="table">{ops}
+                 {/*<div className="cells" onClick={() => alert("wow")}>{ops} </div>
+                <div className="cells" onClick={() => alert("wow")}>{ops} </div>
+               <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
                 <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
                 <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
                 <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
+    <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>*/}
             </div >
         </div>
     )

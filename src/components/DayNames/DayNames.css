@@ -3,22 +3,26 @@
     height: 99vh;
 }
 
-.cells {
-    display:flex;
+.ops_header {
+    display: flex;
+    justify-content:center;
+    align-items: center;
     flex-direction:column;
-    height: 100%;
-    width: 100%;
-}
-
+    background-color: darkgrey;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    border: 1px solid black;
+    border-bottom: 0;
+    border-left:0;
+  }
 
 .operator {
     display: flex;
     justify-content:center;
     align-items: center;
-    border: 1px solid black;
-    border-bottom: 0;
-    border-left:0;
     background-color: lightslategrey;
+    border-top: 1px solid black;
     color: white;
     cursor: pointer;
     font-weight: 600;
@@ -34,7 +38,7 @@
 .operator:last-child{
     border-bottom: 1px solid black;
 }
-.cells:first-child {
+.ops_header:first-child {
     border-left: 1px solid black;
 }
 
@@ -43,3 +47,5 @@
     border-top: 2px solid black;
   }
   */
+
+  

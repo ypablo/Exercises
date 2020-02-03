@@ -26,26 +26,23 @@ export default function Days() {
         x.setDate(x.getDate() + 1);
     }
     let namesOfDaysInMonth = foo2.map((elem, index) => {
-        return <div className="numbers" key={index}>
-            {elem}</div>
-    })
-
-
-
-
+        return (
+            <div className="numbers" key={index}>
+                {elem}
+            </div>
+           )})
 
 
     return (
-        <div>
-            <div>TOP</div>
-            <div className="month">
-
-                <div className="day-range">
-                    {rangeOfDaysInMonth}
-                </div>
-                <div className="day-names">
-                    {namesOfDaysInMonth}
-                </div>
+        <div className="month">
+            <div className="day-range">
+            <div className="top">a</div>
+                {rangeOfDaysInMonth}
+            </div>
+            
+            <div className="day-names">
+            <span className="top">b</span>
+                 {namesOfDaysInMonth}
             </div>
         </div>
     )
