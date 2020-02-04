@@ -1,7 +1,7 @@
 .month{
     display:flex;
     height: 99vh;
-    
+    box-shadow: 6px 1px 8px 0px rgba(0,0,0,0.73);
 }
 .day-range { 
     display:flex;
@@ -41,12 +41,9 @@
     width: 100%;
     border: 1px solid black;
     border-bottom: 0;
-    color: white;
+    color: black;
 }
 
-.numbers:hover {
-    background-color: darkslategray; 
-}
 
 .numbers:last-child{
     border-bottom: 1px solid black;

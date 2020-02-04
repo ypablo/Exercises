@@ -6,7 +6,10 @@ export default function Days() {
     //Getting number of days of month
     const month = new Date().getMonth() + 1
     const year = new Date().getFullYear()
+    const monthShortNamesArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    
     const numberDaysOfMonth = new Date(year, month, 0).getDate();
+    const monthShortName = monthShortNamesArray[new Date().getMonth()]
 
     let foo1 = []
     for (let i = 1; i <= numberDaysOfMonth; i++) {
@@ -36,12 +39,12 @@ export default function Days() {
     return (
         <div className="month">
             <div className="day-range">
-            <div className="top">a</div>
+            <div className="top">#</div>
                 {rangeOfDaysInMonth}
             </div>
             
             <div className="day-names">
-            <span className="top">a</span>
+            <span className="top">{monthShortName} {year}</span>
                  {namesOfDaysInMonth}
             </div>
         </div>
