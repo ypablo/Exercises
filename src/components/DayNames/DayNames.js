@@ -46,7 +46,7 @@ export default function Cells(props) {
                 <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
                 <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
                 <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>
-    <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>*/}
+                <div className="cells" onClick={() => alert("wow")}>{rangeOfDaysInMonth} </div>*/}
             </div >
         </div>
     )

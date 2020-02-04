@@ -34,13 +34,14 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    background-color: blue;
+    background-color: white;
     font-weight: 600;
     font-size: large;
-    height: 3vh;
+    height: 50%;
     width: 100%;
     border: 1px solid black;
     border-bottom: 0;
+    color: white;
 }
 
 .numbers:hover {

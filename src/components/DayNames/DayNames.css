@@ -1,6 +1,7 @@
 .table {  
     display: flex;
-    height: 99vh;
+    height: 100%;
+    
 }
 
 .ops_header {

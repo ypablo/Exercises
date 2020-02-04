@@ -41,7 +41,7 @@ export default function Days() {
             </div>
             
             <div className="day-names">
-            <span className="top">b</span>
+            <span className="top">a</span>
                  {namesOfDaysInMonth}
             </div>
         </div>
