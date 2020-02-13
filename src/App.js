@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react'
 import './App.css';
 import Days from "./components/Days/Days"
 import DayNames from "./components/DayNames/DayNames"
 
-function App() {
-  return (
-    <div className="App">
-      <Days />
-      <DayNames />
-    </div>
-  );
-}
 
-export default App;
+export default class App extends Component {
+
+
+
+  render() {
+    return (
+      <div className="App">
+        <Days />
+        <DayNames />
+      </div>
+    )
+  }
+}
