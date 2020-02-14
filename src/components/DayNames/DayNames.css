@@ -24,7 +24,7 @@
     align-items: center;
     background-color: lightslategrey;
     border-top: 1px solid black;
-    color: white;
+    color: rgba(171, 183, 183, 0.3);
     cursor: pointer;
     font-weight: 600;
     font-size: large;
