@@ -6,7 +6,8 @@ export default class DayNames extends Component {
         super(props)
         this.state = {
             bgColor: "lightslategrey",
-            isToggleOn: true
+            isToggleOn: true,
+            ID: null,
         }
     }
 
@@ -15,17 +16,26 @@ export default class DayNames extends Component {
         //alert(e.currentTarget.innerHTML);
         //this.setState({ bgColor: "red" })
         e.preventDefault()
-        if (e.currentTarget.dataset.id === 0 || e.currentTarget.dataset.id) {
+
+        /*if (e.currentTarget.dataset.id === 0 || e.currentTarget.dataset.id) {
            // e.currentTarget.style.backgroundColor = "yellow"
           //  e.currentTarget.innerHTML = "H"
         } else {
             e.currentTarget.innerHTML = e.currentTarget.dataset.id
+        }*/
+        
+        
+
+        if (e.currentTarget.dataset.id === 0 || e.currentTarget.dataset.id) {
+           
         }
         
-        this.setState(prevState => ({
+
+        /*this.setState(prevState => ({
             isToggleOn: !prevState.isToggleOn,
             
-          }));
+          }));*/
+
         console.log(  e.currentTarget.dataset.id )
     
        /*
@@ -70,8 +80,8 @@ export default class DayNames extends Component {
                             data-id={cell}
                             key={index}
                             onClick={(e) => this.handleClick(e)}>
-                            {/*this.state.isToggleOn ?  cell : 'OFF'*/}
-                            {cell}
+                            {this.state.isToggleOn ?  cell : "UPS"}
+                            {/*cell*/}
                             </div>)
                     })
                     }
