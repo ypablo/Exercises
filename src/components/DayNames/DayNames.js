@@ -6,7 +6,7 @@ export default class DayNames extends Component {
         super(props)
         this.state = {
             bgColor: "lightslategrey",
-            isToggleOn: {},
+            isToggleOn: true,
             ID: null
         }
     }
@@ -23,7 +23,9 @@ export default class DayNames extends Component {
         //if (e.currentTarget.dataset.id === 0 || e.currentTarget.dataset.id) { 
         //}
 
-        this.setState(prevState => ({ isToggleOn: {...prevState.isToggleOn, [e]:!prevState.isToggleOn[e] }}));
+        this.setState(prevState => ({ isToggleOn: {...prevState.isToggleOn, [e]:!prevState.isToggleOn[e] }}))
+        
+        
         //console.log(  e.currentTarget.dataset.id )
 
        /*
@@ -58,7 +60,7 @@ export default class DayNames extends Component {
         }
 
 
-        let foo2 = ["Ops1", "Clint", "Michael", "Pawel", "Ops2", "Simon"]
+        let foo2 = ["Ops1", "Ops2", "Ops3", "Ops4", "Ops5", "Ops6"]
         const ops = foo2.map((elem, index) => {
             return (
                 <div className="ops_header" key={index}>
@@ -67,8 +69,8 @@ export default class DayNames extends Component {
                             className="operator"
                             data-id={cell}
                             key={i}
-                            onClick={(i) => this.handleClick(i)}>
-                            {this.state.isToggleOn[i] ?  "H" : cell}
+                            onClick={() => this.handleClick(i)}>
+                            {this.state.isToggleOn[i] ? "Holiday" : cell}
                             {/*cell*/}
                             {/*this.state.selected[i] ? cell : "OFF"*/}
                             </div>)
