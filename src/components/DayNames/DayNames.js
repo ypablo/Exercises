@@ -6,38 +6,26 @@ export default class DayNames extends Component {
         super(props)
         this.state = {
             bgColor: "lightslategrey",
-            isToggleOn: true,
-            ID: null,
+            isToggleOn: {},
+            ID: null
         }
     }
+
+
+
 
     handleClick = (e) => {
         
         //alert(e.currentTarget.innerHTML);
         //this.setState({ bgColor: "red" })
-        e.preventDefault()
+        //e.preventDefault()
 
-        /*if (e.currentTarget.dataset.id === 0 || e.currentTarget.dataset.id) {
-           // e.currentTarget.style.backgroundColor = "yellow"
-          //  e.currentTarget.innerHTML = "H"
-        } else {
-            e.currentTarget.innerHTML = e.currentTarget.dataset.id
-        }*/
-        
-        
+        //if (e.currentTarget.dataset.id === 0 || e.currentTarget.dataset.id) { 
+        //}
 
-        if (e.currentTarget.dataset.id === 0 || e.currentTarget.dataset.id) {
-           
-        }
-        
+        this.setState(prevState => ({ isToggleOn: {...prevState.isToggleOn, [e]:!prevState.isToggleOn[e] }}));
+        //console.log(  e.currentTarget.dataset.id )
 
-        /*this.setState(prevState => ({
-            isToggleOn: !prevState.isToggleOn,
-            
-          }));*/
-
-        console.log(  e.currentTarget.dataset.id )
-    
        /*
        
        if(e.currentTarget.style.backgroundColor  === "yellow") {
@@ -74,14 +62,15 @@ export default class DayNames extends Component {
         const ops = foo2.map((elem, index) => {
             return (
                 <div className="ops_header" key={index}>
-                    {elem}{foo1.map((cell, index) => {
+                    {elem}{foo1.map((cell, i) => {
                         return (<div
                             className="operator"
                             data-id={cell}
-                            key={index}
-                            onClick={(e) => this.handleClick(e)}>
-                            {this.state.isToggleOn ?  cell : "UPS"}
+                            key={i}
+                            onClick={(i) => this.handleClick(i)}>
+                            {this.state.isToggleOn[i] ?  "H" : cell}
                             {/*cell*/}
+                            {/*this.state.selected[i] ? cell : "OFF"*/}
                             </div>)
                     })
                     }
