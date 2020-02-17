@@ -42,3 +42,10 @@
 .ops_header:first-child {
     border-left: 1px solid black;
 }
+
+.toggleColor {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: red;
+}
