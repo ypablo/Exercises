@@ -12,21 +12,17 @@ export default class DayNames extends Component {
     }
 
     handleClick = (row, col) => {
-        //const green = "#39D1B4"
-        const yellow = "#FFD712"
-        const newColor = this.state.bgColor === "lightslategrey" ? yellow : "lightslategrey";
-        const target = [row, col]
-        console.log(target);
+        const newColor = this.state.bgColor === "lightslategrey" ? "#FFD712" : "lightslategrey";
         this.setState( prevState => ({
         isToggleOn: {
             ...prevState.isToggleOn,
-            [row]:{...prevState.isToggleOn[row],[col]: !(prevState.isToggleOn[row] && prevState.isToggleOn[row][col])},
-            
+            [row]:{...prevState.isToggleOn[row],[col]: !(prevState.isToggleOn[row] && prevState.isToggleOn[row][col])},  
         },
         newColor
-        }));
-        
+        }));      
     }
+
+
     render() {
         //Getting number of days of month
         const month = new Date().getMonth() + 1
@@ -45,13 +41,22 @@ export default class DayNames extends Component {
                 <div className="ops_header" key={index}>
                     {elem}
                     {foo1.map((cell, i) => {
-                        return (<div
-                            className="operator"
-                            data-id={cell}
-                            key={i}
-                            onClick={() => this.handleClick(i, index)}>
-                            {this.state.isToggleOn[i] && this.state.isToggleOn[i][index] ? 
-                                <div className="toggleColor" style={{backgroundColor : this.state.bgColor}}>Holiday</div> : cell}
+                        return (
+                            <div
+                                className="operator"
+                                data-id={cell}
+                                key={i}
+                                onClick={() => this.handleClick(i, index)}>
+                                {this.state.isToggleOn[i] && this.state.isToggleOn[i][index] ? 
+                                <div className="holiday" style={{backgroundColor : this.state.bgColor}}>Holiday</div> : cell }
+                                {/*(() => {
+                                    switch (this.state.isToggleOn[i] && this.state.isToggleOn[i][index]) {
+                                      case cell:   return "Holiday";
+                                      case "Holiday": return "D";
+                                      case "D":  return "N";
+                                      default:      return cell;
+                                    }
+                                })()*/}
                             </div>)
                     })}
                 </div>)
